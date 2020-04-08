@@ -1,0 +1,26 @@
+.container_center{
+    width: 1000px;
+    overflow: auto;
+    margin: auto;
+}
+
+
+footer{
+    width: 100%;
+    min-height: 200px;
+    background: #1b384b;
+    color: white;
+    text-align: center;
+
+}
+
+.content-footer{
+    width: 500px;
+    margin: auto;
+}
+
+body{
+    width: 100%;
+
+}
+

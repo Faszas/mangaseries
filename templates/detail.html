@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ obj.title }}
+{% endblock %}
+
+
+{% block main %}
+    <div style="height: 100px; margin: auto; width: 700px">
+        <h1>{{ obj.title }}</h1>
+    </div>
+    <div class="container_center">
+        {% for foo in imgs %}
+            <img src="{{ foo }}" width="800px"> <br>
+        {% endfor %}
+
+    </div>
+    <div class="container_center">
+        <div style="float: left">
+            {% if obj.chapter >= 2 %}
+                <a href="../{{ obj.chapter|add:"-1"  }}"> Previous</a>
+                {% else %}
+                <a> Previous</a>
+            {% endif %}
+
+        </div>
+        <div style="float: right">
+            {% if obj.chapter < count %}
+                <a href="../{{ obj.chapter|add:"1"  }}"> Next</a>
+                {% else %}
+                <a> Next</a>
+            {% endif %}
+
+        </div>
+    </div>
+    <div class="container_center">
+        <div style="float: left">
+           <a href="delete/" class="btn btn-primary"> Delete  </a>
+        </div>
+
+          <div style="float: right">
+            <a href="update/" class="btn btn-primary"> Update </a>
+        </div>
+    </div>
+
+{% endblock %}

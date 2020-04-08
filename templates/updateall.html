@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+    <div class="container_center">
+        <form action="" method="post">
+            {% csrf_token %}
+              <div class="form-group">
+                    <label>Category</label>
+                    <textarea class="form-control" rows="3" name="category" id="categoryarea"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" class="form-control"  name="author">
+                </div>
+
+                <button type="submit">Update all </button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+
+    <h1 style="text-align: center">{{ name }}</h1>
+    <div class="container_center">
+        {% for foo in obj %}
+            <a href="../detail/{{ foo.chapter }}">{{ foo.title }}</a> <br>
+        {% endfor %}
+    </div>
+
+    <div class="container_center">
+        <div style="float: left">
+           <a href="../delete/" class="btn btn-primary"> Delete  </a>
+        </div>
+
+          <div style="float: right">
+            <a href="../update/" class="btn btn-primary"> Update </a>
+        </div>
+    </div>
+{% endblock %}

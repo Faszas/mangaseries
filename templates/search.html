@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    search result
+{% endblock %}
+
+{% block main %}
+
+    {% for foo in obj1 %}
+    <a href="../../{{ foo.get_absolute_url }}{{ foo.chapter }}/">{{ foo.title }}</a> <br>
+    {% endfor %}
+
+    {% for foo in obj2 %}
+    <a href="../../{{ foo.get_absolute_url }}{{ foo.chapter }}/">{{ foo.title }}</a> <br>
+    {% endfor %}
+
+    {% for foo in obj3 %}
+    <a href="../../{{ foo.get_absolute_url }}{{ foo.chapter }}/">{{ foo.title }}</a> <br>
+    {% endfor %}
+
+    {% for foo in obj4 %}
+    <a href="../../{{ foo.get_absolute_url }}{{ foo.chapter }}/">{{ foo.title }}</a> <br>
+    {% endfor %}
+
+    {% for foo in obj5 %}
+    <a href="../../{{ foo.get_absolute_url }}{{ foo.chapter }}/">{{ foo.title }}</a> <br>
+    {% endfor %}
+
+    {% for foo in obj6 %}
+    <a href="../../{{ foo.get_absolute_url }}{{ foo.chapter }}/">{{ foo.title }}</a> <br>
+    {% endfor %}
+    
+
+{% endblock %}
